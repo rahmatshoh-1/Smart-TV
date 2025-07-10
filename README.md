@@ -1,35 +1,21 @@
-# smartTV
+<img width="1342" height="677" alt="smartTV" src="https://github.com/user-attachments/assets/af54813b-3388-4adc-b7cc-e132f266a489" />
 
-This template should help get you started developing with Vue 3 in Vite.
+SmartTV
 
-## Recommended IDE Setup
+SmartTV — современное веб-приложение для просмотра фильмов и сериалов, реализованное на Vue 3 с использованием Composition API. Визуальный интерфейс разработан с применением Tailwind CSS 4, обеспечивающего быстрый и адаптивный дизайн. Для взаимодействия с внешними API используется Axios. Сборка и разработка проекта организованы с помощью Vite, что обеспечивает высокую скорость разработки и быструю перезагрузку.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Основные технологии
 
-## Customize configuration
+Vue 3 (Composition API) — для создания реактивного и модульного интерфейса
+TailwindCSS 4 — утилитарный CSS-фреймворк для гибкой и быстрой стилизации
+Axios — для удобных HTTP-запросов к API
+Vite — современный инструмент сборки для быстрого старта и разработки
+Vue Router — маршрутизация по страницам приложения
+Swiper — библиотека для создания слайдеров и каруселей
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Особенности
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Просмотр популярных и рекомендованных фильмов и сериалов
+Адаптивный и современный UI/UX
+Высокая производительность и скорость загрузки
+Чистый и поддерживаемый код благодаря ESLint и Prettier
