@@ -1,23 +1,47 @@
 <script setup>
 import SearchBar from '@/components/Search.vue'
 import MovieCard from '@/components/MovieCard.vue'
-import { ref } from 'vue'
-import data from '@/data/data.json'
+import axios from 'axios'
+import { ref, onMounted } from 'vue'
 
-const movies = ref(data.filter((item) => item.category === 'Movie'))
-const search = (searchValue) => {
-  if (searchValue.length > 0) {
-    movies.value = movies.value.filter(
-      (m) => m.title.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0,
-    )
-  } else {
-    movies.value = data.filter((item) => item.category === 'Movie')
+const movies = ref([])
+const allMovies = ref([])
+
+async function getMovies() {
+  try {
+    const response = await axios.get('http://api.testilac.beget.tech/api/movie')
+    let data = response.data
+     // Парсим поле thumbnail у каждого фильма
+    data = data.map(item => {
+      return {
+        ...item,
+        thumbnail: JSON.parse(item.thumbnail)
+      }
+    })
+    allMovies.value = data.filter(item => item.category === 'Movie')
+    movies.value = [...allMovies.value] // копия массива
+  } catch (error) {
+    console.error('Ошибка при загрузке фильмов:', error)
   }
 }
+
+function search(searchValue) {
+  if (searchValue.length > 0) {
+    movies.value = allMovies.value.filter(movie =>
+      movie.title.toLowerCase().includes(searchValue.toLowerCase())
+    )
+  } else {
+    movies.value = [...allMovies.value]
+  }
+}
+
+onMounted(() => {
+  getMovies()
+})
 </script>
 
 <template>
-  <main class="container mx-auto">
+  <main>
     <SearchBar placeholder="Search for movies" @search="search" />
     <section>
       <h1 class="text-preset-1 font-light mt-10 mb-8">Movies</h1>

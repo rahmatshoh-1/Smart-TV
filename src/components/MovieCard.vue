@@ -9,7 +9,7 @@ defineProps({
 <template>
   <div>
     <div class="relative group">
-      <button @click="movie.isBookmarked = !movie.isBookmarked"
+      <button
         class="cursor-pointer z-50 absolute top-4 right-4 w-8 h-8 rounded-full bg-grey-500 flex items-center justify-center">
         <img class="w-3 h-[14px]"
           :src="movie.isBookmarked ? '/img/icon-bookmark-full.svg' : '/img/icon-bookmark-empty.svg'"
