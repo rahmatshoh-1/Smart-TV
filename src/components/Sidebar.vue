@@ -5,7 +5,7 @@ const route = useRoute()
 
 <template>
   <nav
-    class="bg-blue-900 px-[28px] py-[32px] w-full lg:h-[960px] lg:w-[96px] rounded-[20px] flex sm:flex-row md:flex-row lg:flex-col items-center justify-between"
+    class="bg-blue-900 px-[16px] py-[32px] w-full lg:h-[960px] lg:w-[96px] md:rounded-[20px] flex sm:flex-row md:flex-row lg:flex-col items-center justify-between"
   >
     <div class="flex justify-between flex-row lg:flex-col items-center gap-[72px]">
       <img src="/img/tranding.svg" alt="" />
