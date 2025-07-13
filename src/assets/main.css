@@ -1,21 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Breakpoints */
-  --breakpoint-*: initial;
-  --breakpoint-sm: 375px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1440px;
 
-  /* container */
-  /* Mobile (375px - 16px * 2) */
-  /* Tablet (768px - 24px * 2) */
-   /* Desktop (1440px - 64px * 2) */
-  /* --container: 100%;
-  --container-sm: 343px;
-  --container-md: 720px;
-  --container-lg: 1376; */
-
+  
   /* colors */
   --color-blue-950: #10141e;
   --color-blue-900: #161d2f;
