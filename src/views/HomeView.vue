@@ -19,7 +19,7 @@ const movies = ref([])
 const getMovies = async () => {
   try {
     loading.value = true
-    const response = await axios.get('http://api.testilac.beget.tech/api/movie')
+    const response = await axios.get('https://cu16821.tw1.ru/api/movie')
     let data = response.data
 
     // Распарсим thumbnail, если нужно

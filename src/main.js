@@ -1,4 +1,6 @@
 import './assets/main.css'
+import Plyr from 'plyr/dist/plyr.polyfilled.js'
+import 'plyr/dist/plyr.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

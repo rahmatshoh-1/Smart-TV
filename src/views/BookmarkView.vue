@@ -13,7 +13,7 @@ const series = ref([])
 async function getMovies() {
   try {
     loading.value = true
-    const response = await axios.get('http://api.testilac.beget.tech/api/movie')
+    const response = await axios.get('https://cu16821.tw1.ru/api/movie')
     let data = response.data
     // Парсим поле thumbnail у каждого фильма
     data = data.map((item) => {
